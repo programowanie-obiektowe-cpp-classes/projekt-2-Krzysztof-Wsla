@@ -1,53 +1,62 @@
 #include <print>
 #include <vector>
 
-class WzorElementu
+//class WzorElementu
+//{
+//public:
+//    virtual ~WzorElementu() = default;
+//
+//    void SetTyp(int typ) { typ_ = typ; }
+//    void SetWysokosc(int wysokosc) { wysokosc_ = wysokosc; }
+//    void SetSzerokosc(int szerokosc) { szerokosc_ = szerokosc; }
+//
+//    int GetTyp() { return typ_; }
+//    int GetWys() { return wysokosc_; }
+//    int GetSzer() { return szerokosc_; }
+//
+//private:
+//    int typ_;
+//    int wysokosc_;
+//    int szerokosc_;
+//};
+//
+//class Element : public WzorElementu
+//{
+//public:
+//    Element() : pozycjaX_{ 0 }, pozycjaY_{ 0 } { SetTyp(0), SetSzerokosc(0), SetWysokosc(0); }
+//    Element(int typ, int X, int Y, int wysokosc, int szerokosc) : pozycjaX_{ X }, pozycjaY_{ Y } { SetTyp(typ), SetWysokosc(wysokosc), SetSzerokosc(szerokosc); }
+//    ~Element() = default;
+//
+//    void Drukuj() {
+//        std::print("\n\n");
+//        for (int i = 0; i < GetWys(); i++)
+//        {
+//            for (int j = 0; j < GetSzer(); j++)
+//            {
+//                std::print("{} ", GetTyp());
+//            }
+//            std::print("\n");
+//        }
+//    }
+//
+//    int GetX() { return pozycjaX_; }
+//    int GetY() { return pozycjaY_; }
+//
+//    void Set_pozycjaX(int x) { pozycjaX_ = x; }
+//    void Set_pozycjaY(int y) { pozycjaY_ = y; }
+//
+//private:
+//    int pozycjaX_;
+//    int pozycjaY_;
+//};
+
+struct Element
 {
-public:
-    virtual ~WzorElementu() = default;
-
-    void SetTyp(int typ) { typ_ = typ; }
-    void SetWysokosc(int wysokosc) { wysokosc_ = wysokosc; }
-    void SetSzerokosc(int szerokosc) { szerokosc_ = szerokosc; }
-
-    int GetTyp() { return typ_; }
-    int GetWys() { return wysokosc_; }
-    int GetSzer() { return szerokosc_; }
-
-private:
     int typ_;
-    int wysokosc_;
-    int szerokosc_;
-};
-
-class Element : public WzorElementu
-{
-public:
-    Element() : pozycjaX_{ 0 }, pozycjaY_{ 0 } { SetTyp(0), SetSzerokosc(0), SetWysokosc(0); }
-    Element(int typ, int X, int Y, int wysokosc, int szerokosc) : pozycjaX_{ X }, pozycjaY_{ Y } { SetTyp(typ), SetWysokosc(wysokosc), SetSzerokosc(szerokosc); }
-    ~Element() = default;
-
-    void Drukuj() {
-        std::print("\n\n");
-        for (int i = 0; i < GetWys(); i++)
-        {
-            for (int j = 0; j < GetSzer(); j++)
-            {
-                std::print("{} ", GetTyp());
-            }
-            std::print("\n");
-        }
-    }
-
-    int GetX() { return pozycjaX_; }
-    int GetY() { return pozycjaY_; }
-
-    void Set_pozycjaX(int x) { pozycjaX_ = x; }
-    void Set_pozycjaY(int y) { pozycjaY_ = y; }
-
-private:
     int pozycjaX_;
     int pozycjaY_;
+    int wysokosc_;
+    int szerokosc_;
 };
 
 std::vector <Element> ObiektyGry()
